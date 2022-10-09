@@ -11,6 +11,8 @@ For schematics see [c0d3z3r0/aixun_t3a_schematics](https://github.com/c0d3z3r0/a
 - `JC_M_T3A_v1.26.bin`: extracted from update tool
 - `JC_M_T3AS_v1.26.bin`: extracted from update tool
 - `t3a_dump_v1.26.bin`: dumped via SWD (see below)
+- `t3a_dump_sram_init_boot_v1.26.bin`: SRAM content written by armlib/Keil init code (bootloader)
+- `t3a_dump_sram_init_main_v1.26.bin`: SRAM content written by armlib/Keil init code (main firmware)
 
 T3AS firmware is for GD32F305/GD32F307 version of the board, which wasn't released (yet?).
 
