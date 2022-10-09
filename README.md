@@ -34,3 +34,22 @@ flash read_bank 0 firmware2.bin 0 0x40000
 ## Notes
 
 - MCU is GD32F303RCT6 (STM32 clone) https://www.gd32mcu.com/en/download/0?kw=GD32F3
+- USB 0403:6001 (FTDI fake device)
+- Firmware based on GD32 fw library 2.1.0, probably Keil MDK
+
+Firmware update log:
+
+```
+>JC_version
+<00160000JC_M_T3A_version1.01
+>0x0002d100JC_M_T3A_version1.01
+>update_jcxx
+>... 2048 bytes from fw image ...
+<ack_jcxx
+>... 2048 bytes from fw image ...
+<ack_jcxx
+>...
+<...
+>... last 256 bytes from fw image ...
+<ack_jcxx
+```
