@@ -1,0 +1,3 @@
+[submodule "firmware/gdlib"]
+	path = firmware/gdlib
+	url = https://github.com/c0d3z3r0/gd32f30x_firmware_library
