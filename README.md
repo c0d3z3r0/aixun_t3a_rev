@@ -6,10 +6,12 @@ Notes, scripts, dumps etc. from RE'ing the AIXUN T3A soldering station.
 
 For schematics see [c0d3z3r0/aixun_t3a_schematics](https://github.com/c0d3z3r0/aixun_t3a_schematics).
 
-## Firmware
+## Firmware dumps / images
 
-- `JC_M_T3A_v1.26.bin`: extracted from update tool
-- `JC_M_T3AS_v1.26.bin`: extracted from update tool
+files in `bin/`:
+
+- `JC_M_T3A_v1.26.bin`: extracted firmware image from update tool
+- `JC_M_T3AS_v1.26.bin`: extracted firmware image from update tool
 - `t3a_dump_v1.26.bin`: dumped via SWD (see below)
 - `t3a_dump_sram_init_boot_v1.26.bin`: SRAM content written by armlib/Keil init code (bootloader)
 - `t3a_dump_sram_init_main_v1.26.bin`: SRAM content written by armlib/Keil init code (main firmware)
