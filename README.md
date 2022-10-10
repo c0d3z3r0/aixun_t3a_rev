@@ -21,7 +21,7 @@ T3AS firmware is for GD32F305/GD32F307 version of the board, which wasn't releas
 ## Debugging with OpenOCD
 
 ```sh
-openocd -f ft4232h_swd.cfg -f target/stm32f3x.cfg
+openocd -f openocd_ft4232h_swd.cfg
 ```
 
 Dumping flash:
@@ -29,8 +29,13 @@ Dumping flash:
 Read protection is *not* enabled! :-)
 
 ```sh
-telnet localhost 4444
-flash read_bank 0 firmware2.bin 0 0x40000
+openocd -f openocd_ft4232h_swd.cfg -c "init; reset halt; flash read_bank 0 firmware_dump.bin 0 0x40000; exit"
+```
+
+Flashing:
+
+```sh
+openocd -f openocd_ft4232h_swd.cfg -c "init; reset halt; flash write_image erase firmware.bin 0x08000000; reset run; exit"
 ```
 
 ## Notes
