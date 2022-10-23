@@ -20,6 +20,37 @@ files in `bin/`:
 
 T3AS firmware is for GD32F305/GD32F307 version of the board, which wasn't released (yet?).
 
+## Flash / firmware image address map
+
+dumped flash image:
+
+```
+0x0000_0000 - 0x0000_a5ff	bootloader
+0x0000_a600 - 0x0000_afff	padding
+0x0000_b000 - 0x0000_dd7f	custom startup image region
+  0x0000_b000 - 0x0000_b7ff	custom startup image signature
+  0x0000_b800 - 0x0000_dd7f	custom startup image data (9600 bytes)
+  0x0000_dd80 - 0x0000_dfff	padding
+0x0000_e000 - 0x000_ffff	padding
+0x0001_0000 - 0x0003_e800	main firmware max size (0x2e800, boot loader limit)
+  0x0001_0000 - 0x0003_cfff	main firmware (fw v1.26)
+  0x0003_d000 - 0x0003_dfff	padding (fw v1.26)
+  0x0003_e000 - 0x0003_e7e7	settings (23 banks of 88 bytes each)
+  0x0003_e7e8 - 0x0003_e7ff	padding
+0x0003_e800 - 0x0003_e803	language flag (0 = chinese, 1 = english)
+0x0003_f000 - 0x0003_f01f	hmac_sha3_256(key='jcid_zxc_t3a_2021041016-20210415', message=$DEVICE_ID) <- silly "DRM" :'D
+0x0003_f020 - 0x0003_f7ff	padding
+0x0003_f800 - 0x0003_f865	firmware signature (fw image header)
+```
+
+downloaded firmware image, v1.26:
+
+```
+0x0000_0000 - 0x0000_0065	firmware signature / header
+0x0000_0066 - 0x0000_00ff	padding
+0x0000_0100 - 0x0002_d0ff	main firmware
+```
+
 ## Debugging with OpenOCD
 
 ```sh
