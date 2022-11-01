@@ -1,10 +1,6 @@
 # AIXUN T3A Reverse Engineering
 
-Notes, scripts, dumps etc. from RE'ing the AIXUN T3A soldering station.
-
-## Schematics
-
-For schematics see [c0d3z3r0/aixun_t3a_schematics](https://github.com/c0d3z3r0/aixun_t3a_schematics).
+Notes, schematics, scripts, dumps etc. from RE'ing the AIXUN T3A soldering station.
 
 ## Firmware dumps / images
 
