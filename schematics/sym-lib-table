@@ -1,0 +1,8 @@
+(sym_lib_table
+  (lib (name "GD32F303Rxx")(type "KiCad")(uri "${KIPRJMOD}/lib/GD32F303Rxx.kicad_sym")(options "")(descr ""))
+  (lib (name "Display16bit")(type "KiCad")(uri "${KIPRJMOD}/lib/Display16bit.kicad_sym")(options "")(descr ""))
+  (lib (name "GX12-5")(type "KiCad")(uri "${KIPRJMOD}/lib/GX12-5.kicad_sym")(options "")(descr ""))
+  (lib (name "V")(type "KiCad")(uri "${KIPRJMOD}/lib/V.kicad_sym")(options "")(descr ""))
+  (lib (name "MPS")(type "KiCad")(uri "${KIPRJMOD}/lib/MPS.kicad_sym")(options "")(descr ""))
+  (lib (name "AO4413")(type "KiCad")(uri "${KIPRJMOD}/lib/AO4413.kicad_sym")(options "")(descr ""))
+)
