@@ -7,7 +7,10 @@ x801abea:
 .org 0x801daac
 x801daac:
     bl	    lcd_init_custom @ call custom lcd init
-    b	    0x801dc08	    @ skip original init
+    b	    x801dc08	    @ skip original init
+
+.org 0x801dc08
+x801dc08:
 
 .org 0x801de1c
 lcd_write_data8:
