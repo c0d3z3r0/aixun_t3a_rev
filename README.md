@@ -104,3 +104,8 @@ Firmware update log:
 >... last 256 bytes from fw image ...
 <ack_jcxx
 ```
+
+## Patching firmware
+
+Take a look at the stuff in patch/.
+
