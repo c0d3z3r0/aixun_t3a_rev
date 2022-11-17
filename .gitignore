@@ -1,0 +1,6 @@
+*.id[012]
+*.nam
+*.til
+*.dmp
+patch/patch.elf
+patch/fw_patched.bin
