@@ -48,6 +48,20 @@ downloaded firmware image, v1.26:
 0x0000_0100 - 0x0002_d0ff	main firmware
 ```
 
+Firmware signature:
+
+```
+0x00 - 0x03:	vendor string: `JCID`
+0x04 - 0x1f:	padding
+0x20 - ....:	product string: `JC_M_T3A`
+.... - 0x3f:	padding
+0x40 - 0x4a:	version string: `version1.26`
+0x4b - 0x5f:	padding
+0x60 - 0x63:	image size, big endian
+0x64 - 0x65:	custom CRC16 (see `crc.py`)
+0x66 - 0xff:	padding
+```
+
 ## Debugging with OpenOCD
 
 ```sh
