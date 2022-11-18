@@ -24,6 +24,19 @@ def calc_crc(data):
   dst = revbits(dst, 16)
   return dst.to_bytes(2, 'big')
 
+# alternate implementation without revbits (same result)
+# https://ctlsys.com/how_to_compute_the_modbus_rtu_message_crc/
+#def calc_crc(data):
+#  dst = 0xffff
+#  for d in data:
+#    dst ^= d
+#    for j in range(8):
+#      if dst & 1:
+#        dst = (dst >> 1) & 0xffff
+#        dst ^= 0xa001
+#      else:
+#        dst = (dst >> 1) & 0xffff
+#  return dst.to_bytes(2, 'big')
 
 if __name__ == '__main__':
   start = 0

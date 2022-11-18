@@ -58,7 +58,7 @@ Firmware signature:
 0x40 - 0x4a:	version string: `version1.26`
 0x4b - 0x5f:	padding
 0x60 - 0x63:	image size, big endian
-0x64 - 0x65:	custom CRC16 (see `crc.py`)
+0x64 - 0x65:	Modbus RTU CRC-16 (see `crc.py`)
 0x66 - 0xff:	padding
 ```
 
