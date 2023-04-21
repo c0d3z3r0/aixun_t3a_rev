@@ -15,7 +15,7 @@ files in `bin/`:
 - `t3a_dump_sram_init_boot_v1.26.bin`: SRAM content written by armlib/Keil init code (bootloader)
 - `t3a_dump_sram_init_main_v1.26.bin`: SRAM content written by armlib/Keil init code (main firmware)
 
-T3AS firmware is for GD32F305/GD32F307 version of the board, which [was](https://www.aixuntech.com/newsinfo/aixun-new-product-launch-t3as-allinone-200w-soldering-station/) released in February of 2023.
+T3AS firmware is for GD32F305/GD32F307 version of the board, which was [released](https://www.aixuntech.com/newsinfo/aixun-new-product-launch-t3as-allinone-200w-soldering-station/).
 
 ## Flash / firmware image address map
 
