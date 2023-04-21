@@ -2,7 +2,7 @@
 
 # converts update to full flash image
 
-[ -f "${1}" ] || (echo "Usage: mkfullimage.sh <JC_M_T3A_v1.xx.bin>" && exit 1)
+[ ! -f "${1}" ] && echo "Usage: mkfullimage.sh <JC_M_T3A_v1.xx.bin>" && exit 1
 
 echo "${1}.full"
 head -c $((0x40000)) /dev/zero | tr '\000' '\377' >"${1}.full"
