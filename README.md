@@ -17,6 +17,18 @@ files in `bin/`:
 
 T3AS firmware is for GD32F305/GD32F307 version of the board, which wasn't released (yet?).
 
+## Constructing full flash image from dump
+
+
+There's a script for that task!
+
+```
+$ ./mkfullimage.sh bin/JC_M_T3A_v1.26.bin
+$ sha1sum bin/t3a_dump_cleaned_v1.26.bin bin/JC_M_T3A_v1.26.bin.full
+15f8ccb768084515bc211185abf7d536e74791fc  bin/t3a_dump_cleaned_v1.26.bin
+15f8ccb768084515bc211185abf7d536e74791fc  bin/JC_M_T3A_v1.26.bin.full
+```
+
 ## Flash / firmware image address map
 
 dumped flash image:
