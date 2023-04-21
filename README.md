@@ -6,8 +6,8 @@ Notes, schematics, scripts, dumps etc. from RE'ing the AIXUN T3A soldering stati
 
 files in `bin/`:
 
-- `JC_M_T3A_v1.26.bin`: extracted firmware image from update tool
-- `JC_M_T3AS_v1.26.bin`: extracted firmware image from update tool
+- `JC_M_T3A_v1.XX.bin`: extracted firmware image from update tool
+- `JC_M_T3AS_v1.XX.bin`: extracted firmware image from update tool
 - `t3a_dump_v1.26.bin`: dumped via SWD (see below, contains remnants from earlier fw version)
 - `t3a_dump_cleaned_v1.26.bin`: `t3a_dump_v1.26.bin` with cleaned padding regions, settings etc.
 - `t3a_dump_boot_v1.26.idb`: IDA Pro project, bootloader (finished)
