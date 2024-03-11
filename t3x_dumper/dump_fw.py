@@ -22,13 +22,16 @@ class T3XDumper():
         pass
 
     def get_port(self):
-        ports = list_ports.comports()
-        port = next(filter(lambda x: x[1].startswith("JCID_T3"), ports))[0]
-        if not port:
+        ports = [p.device for p in list_ports.comports() if p.serial_number and p.serial_number.startswith("JCID_T3")]
+        if len(ports) > 1:
+            error("Multiple T3x attached.")
+            sys.exit(1)
+
+        elif not ports:
             error("No T3x found.")
             sys.exit(1)
 
-        return port
+        return ports[0]
 
     def connect(self):
         self.ser = serial.Serial(self.get_port(), baudrate=115200, timeout=3)
