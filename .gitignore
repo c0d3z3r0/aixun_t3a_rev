@@ -4,3 +4,4 @@
 *.dmp
 patch/patch.elf
 patch/fw_patched.bin
+t3x_dumper/*.elf

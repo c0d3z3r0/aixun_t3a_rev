@@ -121,3 +121,19 @@ Firmware update log:
 
 Take a look at the stuff in patch/.
 
+## T3B Bootloader dumping
+
+It seems that AiXun started using RDP1 on T3B. Thus, it's not possible to dump the bootloader directly. There are a few options, though:
+- Voltage glitch attack to disable RDP1, then dump via SWD
+- Exploit [GigaVulnerability](https://a1exdandy.me/slides/offzone2023-gd32.pdf) # 2 or # 3, e.g. with [sraptor_exploit](https://github.com/darkspr1te/sraptor_exploit)
+- Flash a dumper firmware through the regular update mechanism.
+
+I already went the voltage-glitching way for various microcontrollers but since I don't own a T3B, I wanted to provide an easy way to dump it for others.
+Thus, I reused my [previous work for patching the T3A firmware](patch/) and created a patched T3B firmware that allows dumping the whole flash through USB.
+
+Instructions:
+1. Create a patched firmware binary in [t3x_dumper_patch/](t3b_dumper_patch/): `./patch_t3b.sh` (or simply use the one provided)
+2. Get [aixun_t3x_updater](https://github.com/c0d3z3r0/aixun_t3x_updater) and flash the patched firmware: `./t3xupdate.py fw_t3b_patched.bin`
+3. Run the dumper: `./dump_fw.py`
+4. Flash a regular image again with `aixun_t3x_updater`
+
