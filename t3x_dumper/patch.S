@@ -51,7 +51,7 @@ dumper_loop:
 .ltorg
 .align
 str_dump:
-    .ascii "dump"
+    .ascii "dump\0"
 .align
 str_jcid_update_mode:
     .ascii "jcid_update_mode"
