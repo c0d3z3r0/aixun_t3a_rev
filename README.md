@@ -139,4 +139,4 @@ Instructions:
 
 ## Credits
 
-Many thanks @ruslan66 for his patience and nerve, helping dumping the T3B bootloader! (check #4)
+Many thanks @ruslan66 for his patience and nerve, helping dumping the T3B bootloader! (check [#4 compatibility with t3b](https://github.com/c0d3z3r0/aixun_t3a_rev/issues/4))
