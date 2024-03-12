@@ -4,8 +4,8 @@
 .org OFFSET_MEMCPY
 memcpy:
 
-.org OFFSET_STRCMP
-strcmp:
+.org OFFSET_STRNCMP
+strncmp:
 
 .org OFFSET_FUNCRET1
 func_ret1:
@@ -28,7 +28,7 @@ dumper_init:
     movs    r2, #4
     adr     r1, str_dump
     mov     r0, r4
-    bl      strcmp
+    bl      strncmp
     cbnz    r0, return
     b       dumper
 return:
@@ -51,7 +51,7 @@ dumper_loop:
 .ltorg
 .align
 str_dump:
-    .ascii "dump\0"
+    .ascii "dump"
 .align
 str_jcid_update_mode:
     .ascii "jcid_update_mode"
