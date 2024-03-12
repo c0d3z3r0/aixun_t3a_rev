@@ -8,7 +8,7 @@ echo "${1}.full"
 head -c $((0x40000)) /dev/zero | tr '\000' '\377' >"${1}.full"
 
 # bootloader from v1.26 dump
-dd if="bin/t3a_dump_cleaned_v1.26.bin" of="${1}.full" bs=1 count=$((0x10000)) conv=notrunc
+dd if="bin/t3a_boot_v1.01.bin" of="${1}.full" bs=1 count=$((0x10000)) conv=notrunc
 
 # main image from update
 dd if="${1}" of="${1}.full" bs=1 skip=$((0x100)) seek=$((0x10000)) conv=notrunc
