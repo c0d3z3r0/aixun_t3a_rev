@@ -137,3 +137,6 @@ Instructions:
 3. Run the dumper: `./dump_fw.py`
 4. Flash a regular image again with `aixun_t3x_updater`
 
+## Credits
+
+Many thanks @ruslan66 for his patience and nerve, helping dumping the T3B bootloader! (check #4)
